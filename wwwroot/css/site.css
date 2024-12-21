@@ -1,0 +1,357 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* Главный контейнер для календаря и сотрудников */
+.main-container {
+  align-items: flex-start; /* Выровнять элементы по верхнему краю */
+  gap: 20px; /* Расстояние между календарём и сотрудниками */
+  padding: 10px;
+}
+
+/* Блок с календарём */
+.calendar-container {
+  flex-shrink: 0; /* Запретить сжатие календаря */
+  width: 250px; /* Ширина блока календаря */
+  background-color: #f5f5f5; /* Светлый фон для блока календаря */
+  border: 1px solid #ccc; /* Рамка */
+  height: 270;
+  border-radius: 8px; /* Закруглённые углы */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+  text-align: center; /* Центрировать текст внутри */
+  margin: 10pt 10pt 0pt 0pt;
+}
+
+/* Сам календарь */
+.calendar {
+  width: 100%; /* Растянуть календарь на всю ширину блока */
+  padding: 5px;
+  font-size: 16px;
+}
+
+.employee-container {
+  display: flex; /* Горизонтальное расположение сотрудников */
+  gap: 10px; /* Зазор между квадратиками */
+  overflow-x: auto; /* Горизонтальная прокрутка */
+  white-space: nowrap; /* Запрещает перенос элементов на новую строку */
+  padding: 10px; /* Внутренний отступ для скролла */
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  border: 1px solid #ddd; /* Лёгкая рамка для визуального разделения */
+}
+
+.employee-box {
+  background-color: #4caf50; /* Зелёный цвет */
+  color: white; /* Белый текст */
+  border: 1px solid #388e3c; /* Тёмно-зелёная рамка */
+  border-radius: 8px; /* Закруглённые углы */
+  padding: 3px; /* Внутренние отступы */
+  text-align: left; /* Выровнять текст по левому краю */
+  height: 150px;
+  width: 150px; /* Фиксированная ширина квадратика */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+  font-family: Arial, sans-serif; /* Шрифт */
+  flex-shrink: 0; /* Запрещает сжиматься квадратикам */
+  font-size: 10pt; /* Размер текста */
+  line-height: 0.7; /* Уменьшенное расстояние между строками (120% от размера шрифта) */
+}
+
+/* Дата */
+.employee-box p:last-child {
+  margin-top: 10px; /* Отступ сверху */
+  font-style: italic; /* Курсив */
+  color: #eeeeee; /* Светлый текст */
+  font-size: 0.9em; /* Размер текста чуть меньше */
+}
+
+.top-bar {
+  background-color: #4CAF50; 
+  color: white;
+  display: flex;
+  justify-content: left; /*space-between;*/
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  margin: 0px 20px 0px 0px;
+}
+
+.inpstyle {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+}
+
+.bar-line {
+  display: flex;
+  padding: 20px;
+}
+
+.bar-line__left {
+  flex: 1;
+  background-color: #D9D9D9;
+}
+
+.bar-line__right {
+  flex: 1;
+  margin-left: 20px;
+  background-color: #D9D9D9;
+}
+
+.bar-line__right_onehuman {
+  flex: 1;
+  margin: 10px;
+  background-color: chartreuse;
+}
+
+.btnadd {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: chartreuse;
+}
+
+.search-bar input {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  width: 800px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.search-bar button:hover {
+  background-color: #45a049;
+}
+
+/* */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.calendar-wrapper {
+  width: 240px; /* Уменьшенная ширина */
+  margin: 2em auto; /* Меньший внешний отступ */
+  padding: 1em; /* Уменьшенный внутренний отступ */
+  border: 1px solid #dcdcff;
+  border-radius: 5px;
+  background: #fff;
+}
+
+table {
+  clear: both;
+  width: 100%;
+  border: 1px solid #dcdcff;
+  border-radius: 3px;
+  border-collapse: collapse;
+  color: #444;
+  font-size: 12px; /* Уменьшенный шрифт */
+}
+
+td {
+  height: 30px; /* Меньшая высота ячейки */
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #dcdcff;
+  border-top: 1px solid #dcdcff;
+  width: 14.28571429%; /* Равномерное распределение */
+}
+
+td.not-current {
+  color: #c0c0c0;
+}
+
+td.today {
+  font-weight: bold;
+  color: #28283b;
+  font-size: 1.2em; /* Уменьшенный размер текущей даты */
+}
+
+thead td {
+  border: none;
+  color: #28283b;
+  text-transform: uppercase;
+  font-size: 1em; /* Меньший шрифт заголовков */
+}
+
+#btnPrev {
+  float: left;
+  margin-bottom: 10px; /* Меньший отступ */
+}
+
+#btnPrev:before {
+  content: '\f104';
+  font-family: FontAwesome;
+  padding-right: 2px;
+}
+
+#btnNext {
+  float: right;
+  margin-bottom: 10px; /* Меньший отступ */
+}
+
+#btnNext:after {
+  content: '\f105';
+  font-family: FontAwesome;
+  padding-left: 2px;
+}
+
+#btnPrev,
+#btnNext {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.6em; /* Уменьшенный шрифт кнопок */
+  color: black;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#btnPrev:hover,
+#btnNext:hover {
+  color: #28283b;
+  font-weight: bold;
+}
+
+/* Главный контейнер для календаря и новостей */
+.calendar-news-container {
+  display: flex; /* Flexbox для расположения календаря и новостей рядом */
+  gap: 20px; /* Расстояние между календарём и новостями */
+  margin-top: 20px;
+}
+
+/* Новости */
+/* Секция новостей */
+.news-section {
+  padding: 20px;
+}
+
+.news-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Контейнер для всех новостей */
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Отступ между карточками */
+  justify-content: flex-start;
+}
+
+/* Карточка новости */
+.news-card {
+  width: 300px; /* Ширина карточки */
+  background-color: #4caf50; /* Зелёный фон */
+  color: white; /* Белый текст */
+  border-radius: 8px; /* Закруглённые углы */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+  overflow: hidden; /* Обрезка изображения */
+}
+
+/* Верхняя картинка новости */
+.news-image {
+  background-color: #ddd; /* Серый фон-заглушка */
+  height: 150px; /* Высота изображения */
+}
+
+/* Контент новости */
+.news-content {
+  padding: 15px;
+}
+
+.news-content h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-content p {
+  font-size: 14px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.news-date {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+}
+
+/* События */
+.events-container {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.event-box {
+  background-color: #4caf50; /* Зелёный цвет */
+  color: white; /* Белый текст */
+  border: 1px solid #388e3c; /* Тёмно-зелёная рамка */
+  border-radius: 8px; /* Закруглённые углы */
+  padding: 10px; /* Внутренние отступы */
+  margin-bottom: 10px; /* Отступ между событиями */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+  font-family: Arial, sans-serif; /* Шрифт */
+  font-size: 14px;
+  font-size: 13px;
+  width: 250px;
+  height: 80px;
+}

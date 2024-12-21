@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<WebApp.Models.Employee>
+
+<div>
+    <div class="main-container">
+        <!-- Сотрудники -->
+        <h3>Сотрудники</h3>
+        <div class="employee-container">
+            @foreach (var employee in Model)
+            {
+                <div class="employee-box">
+                    <p>@employee.Name @employee.FirtsName</p>
+                    <p>@employee.LastName</p>
+                    <p>@employee.Email</p>
+                    <p>@DateTime.Now.ToString("dd.MM.yyyy")</p>
+                </div>
+            }
+        </div>
+
+        <!-- Календарь и Новости -->
+        <div class="calendar-news-container">
+            <!-- Календарь -->
+            <div class="calendar-container">
+                <link rel='stylesheet'
+                    href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+                <div class="calendar-wrapper">
+                    <button id="btnPrev" type="button">Предыдущий</button>
+                    <button id="btnNext" type="button">Следующий</button>
+                    <div id="divCal"></div>
+                </div>
+            </div>
+
+            <!-- Новости -->
+            <div class="news-section">
+                <h3>Новости</h3>
+                <div class="news-container">
+                    <!-- Одна новость -->
+                    <div class="news-card">
+                        <div class="news-image"></div>
+                        <div class="news-content">
+                            <h4>Водители на трассе M-12 сыграли "Полёт шмеля"</h4>
+                            <p>Они ехали-ехали и сыграли! Они ехали-ехали и сыграли! Они ехали-ехали и сыграли! Они
+                                ехали-ехали и сыграли!</p>
+                            <span class="news-date">04.05.2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Повторить для других новостей -->
+                    <div class="news-card">
+                        <div class="news-image"></div>
+                        <div class="news-content">
+                            <h4>Водители на трассе M-12 сыграли "Полёт шмеля"</h4>
+                            <p>Они ехали-ехали и сыграли! Они ехали-ехали и сыграли! Они ехали-ехали и сыграли! Они
+                                ехали-ехали и сыграли!</p>
+                            <span class="news-date">04.05.2024</span>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <div class="news-image"></div>
+                        <div class="news-content">
+                            <h4>Водители на трассе M-12 сыграли "Полёт шмеля"</h4>
+                            <p>Они ехали-ехали и сыграли! Они ехали-ехали и сыграли! Они ехали-ехали и сыграли! Они
+                                ехали-ехали и сыграли!</p>
+                            <span class="news-date">04.05.2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- События -->
+        <div class="events-container">
+            <h3>События</h3>
+            <div class="event-box">Заглушка для события 1</div>
+            <div class="event-box">Заглушка для события 2</div>
+            <div class="event-box">Заглушка для события 3</div>
+        </div>
+    </div>
+</div>
